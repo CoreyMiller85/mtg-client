@@ -8,6 +8,8 @@ const CardList = (props) => {
       display: "flex",
       flexWrap: "wrap",
       background: "#000",
+      justifyContent: "space-between",
+      alignItems: "center",
     },
   };
 
