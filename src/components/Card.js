@@ -12,17 +12,26 @@ const Card = (props) => {
       borderRadius: "4.75% / 3.5%",
     },
   };
-  const imageThumb = props.data.image_uris ? (
+  const imageThumb = (
     <img
       style={styles.img}
       src={props.data.image_uris.normal}
       alt={props.data.name}
     />
-  ) : (
-    <p style={{ color: "white" }}> {props.data.name}</p>
   );
 
-  return <div style={styles.card}>{imageThumb}</div>;
+  const handleAddToCollection = () => {
+    props.handlePostData(props.data.id);
+  };
+
+  return (
+    <div style={styles.card}>
+      <div>{imageThumb}</div>
+      <div>
+        <button onClick={handleAddToCollection}>Add To Collection</button>
+      </div>
+    </div>
+  );
 };
 
 export default Card;

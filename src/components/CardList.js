@@ -1,5 +1,7 @@
 import React from "react";
 import Card from "./Card";
+import mtgifyURL from "../api/mtg-ify";
+
 const CardList = (props) => {
   const styles = {
     container: {
@@ -9,8 +11,17 @@ const CardList = (props) => {
     },
   };
 
+  const handlePostData = async (card) => {
+    const cardId = {
+      id: card,
+    };
+    await mtgifyURL.post("/api/collection", cardId);
+  };
+
   const cardsMap = props.cards.map((card) => {
-    return <Card data={card} />;
+    if (card.image_uris) {
+      return <Card key={card.id} data={card} handlePostData={handlePostData} />;
+    }
   });
   return <div style={styles.container}>{cardsMap}</div>;
 };

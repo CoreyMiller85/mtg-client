@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import mtgifyURL from "../api/mtg-ify";
 import CardList from "./CardList";
 
 const App = () => {
@@ -10,9 +10,7 @@ const App = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const response = await axios.get(
-      "https://cjm-mtg-collection.herokuapp.com/api/cards?name=" + inputValue
-    );
+    const response = await mtgifyURL.get("/api/cards?name=" + inputValue);
     setCards(response.data);
     setLoading(false);
   };
