@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import mtgifyURL from "../api/mtg-ify";
 import CardList from "./CardList";
+import Header from "./Header";
+import Hero from "./Hero";
 
 const App = () => {
   const [inputValue, setInputValue] = useState("");
@@ -24,6 +26,7 @@ const App = () => {
   } else {
     return (
       <div style={{ background: "#000" }}>
+        {/* <Header />
         <div>
           <form onSubmit={handleSubmit}>
             <label htmlFor="search-bar">Search: </label>
@@ -35,8 +38,9 @@ const App = () => {
             />
             <button type="submit">Search</button>
           </form>
-        </div>
-        <CardList cards={cards} />
+        </div> */}
+        <Hero />
+        {/* <CardList cards={cards} /> */}
       </div>
     );
   }

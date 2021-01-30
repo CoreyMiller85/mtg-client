@@ -1,0 +1,17 @@
+.Header {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header .logo {
+  flex: 4;
+}
+
+.Header .link-list {
+  display: flex;
+  flex: 5;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+}

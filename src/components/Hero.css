@@ -1,0 +1,45 @@
+.Hero {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+    url(../images/hero2-large.jpg);
+  background-position: center;
+  height: 100vh;
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+}
+
+.Hero .text-box {
+  height: 100%;
+  margin: 0 auto;
+  width: 80%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Hero h1 .heading-primary {
+  display: block;
+}
+
+.Hero h1 .heading-sub {
+  display: block;
+}
+
+.Hero .button a {
+  text-decoration: none;
+  color: #333;
+}
+
+.Hero a:active {
+  color: #333;
+}
+
+.Hero .button {
+  display: inline-block;
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  margin: 2rem;
+}
