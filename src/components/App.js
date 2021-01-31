@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import mtgifyURL from "../api/mtg-ify";
+import Table from "./Table";
 import CardList from "./CardList";
 import Header from "./Header";
 import Hero from "./Hero";
@@ -25,7 +26,7 @@ const App = () => {
     );
   } else {
     return (
-      <div style={{ background: "#000" }}>
+      <div>
         {/* <Header />
         <div>
           <form onSubmit={handleSubmit}>
@@ -39,7 +40,7 @@ const App = () => {
             <button type="submit">Search</button>
           </form>
         </div> */}
-        <Hero />
+        <Table />
         {/* <CardList cards={cards} /> */}
       </div>
     );

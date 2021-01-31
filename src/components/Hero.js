@@ -11,13 +11,15 @@ const Hero = () => {
             Magic: The Gathering Collection Database
           </span>
         </h1>
-        <h4 className="button">
-          <a href="#">Search For Card</a>
-        </h4>
-
-        <a href="#">
-          <h4 className="button">Collection </h4>
-        </a>
+        {/* Style this part when you get back, try it without a div or anything wrapping it, try to get it to scale */}
+        <div className="btn-box">
+          <a href="#" className="btn">
+            Search
+          </a>
+          <a href="#" className="btn">
+            Collection
+          </a>
+        </div>
       </div>
     </div>
   );
