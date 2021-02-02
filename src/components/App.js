@@ -13,7 +13,11 @@ const App = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const response = await mtgifyURL.get("/api/cards?name=" + inputValue);
+    const response = await mtgifyURL.get("/api/cards", {
+      params: {
+        name: inputValue,
+      },
+    });
     setCards(response.data);
     setLoading(false);
   };
@@ -27,7 +31,7 @@ const App = () => {
   } else {
     return (
       <div>
-        {/* <Header />
+        <Header />
         <div>
           <form onSubmit={handleSubmit}>
             <label htmlFor="search-bar">Search: </label>
@@ -39,9 +43,9 @@ const App = () => {
             />
             <button type="submit">Search</button>
           </form>
-        </div> */}
-        <Table />
-        {/* <CardList cards={cards} /> */}
+        </div>
+        {/* <Table /> */}
+        <CardList cards={cards} />
       </div>
     );
   }
